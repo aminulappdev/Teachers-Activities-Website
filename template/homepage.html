@@ -1,0 +1,564 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  {% for d in teachers %}
+  <style>
+    .dynamicDiv {
+      height: 20px;
+      width: 20px;
+      border-radius: 50%;
+      animation: divChange 5s infinite alternate;
+    }
+
+    @keyframes divChange {
+      0% {
+        height: 30px;
+        width: 30px;
+      }
+
+      50% {
+        height: 40px;
+        width: 40px;
+      }
+
+      100% {
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    /* .razzak {
+      --box-color: {{d.color}};
+      background-color: var(--box-color);
+    } */
+
+
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    .carousel-item {
+      padding: 3% 3%;
+      font-style: italic;
+
+    }
+  </style>
+  {% endfor %}
+  <title>Homepage</title>
+</head>
+
+<body>
+  <div class="container-fluid" style="height: 100%;">
+    <div class="row">
+      <div class="col-lg-7 " style="background-color: rgb(206, 233, 244); border: 2px solid black;">
+        <div class="row">
+          <div class="col-lg-12">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                  aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
+                  aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
+                  aria-label="Slide 5"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div>
+                    <div class="row">
+                      <div class="col-lg-12">
+                        <div class="bg-light p-2" style="border: 1px solid black">
+                          <h1 class="text-center mb-1">Teachers Informations</h1>
+                        </div><br>
+                      </div>
+                      <!-- Teacher page start ........................ -->
+                      <div class="col-lg-6 ">
+                        <div class="d-flex bg-light p-2 mb-2">
+                          <div>
+                            <img src="{% static 'teachers/razzak.jpg' %}" alt="" style="height: 120px; width: 120px;">
+                          </div>
+                          <div class="ms-2" style="font-size: x-large; line-height: 45%;">
+                            <h3>Md Ab. Razzak</h3>
+                            <p>Head & Assistant. Professor</p>
+                            <p>01746-671227</p>
+                            <p>razzak buet@gmail.com</p>
+                          </div>
+                        </div>
+                        <div class="d-flex bg-light p-2 mb-2">
+                          <div>
+                            <img src="{% static 'teachers/partho.jpg' %}" alt="" style="height: 120px; width: 120px;">
+                          </div>
+                          <div class="ms-2" style="font-size: x-large; line-height: 45%;">
+                            <h3>Partho Sarathi Sarker</h3>
+                            <p>Co-Head & Assistant. Professor</p>
+                            <p>01926-203351</p>
+                            <p>parthosarker93@gmail.com</p>
+                          </div>
+                        </div>
+                        <div class="d-flex bg-light p-2 mb-2">
+                          <div>
+                            <img src="{% static 'teachers/riadul.jpg' %}" alt="" style="height: 120px; width: 120px;">
+                          </div>
+                          <div class="ms-2" style="font-size: x-large; line-height: 45%;">
+                            <h3>Md. Riadul Islam</h3>
+                            <p>Assistant. Professor</p>
+                            <p>01842-611852</p>
+                            <p>riadnwu@gmail.com</p>
+                          </div>
+                        </div>
+                        <div class="d-flex bg-light p-2 mb-2">
+                          <div>
+                            <img src="{% static 'teachers/shaon.jpg' %}" alt="" style="height: 120px; width: 120px;">
+                          </div>
+                          <div class="ms-2" style="font-size: x-large; line-height: 45%;">
+                            <h3>Md. Mahadi Hasan Shaon</h3>
+                            <p>Lecturer</p>
+                            <p>01721-855838</p>
+                            <p>mhshaon1995@gmail.com</p>
+                          </div>
+                        </div>
+                        <div class="d-flex bg-light p-2 mb-2">
+                          <div>
+                            <img src="{% static 'teachers/rafi.jpg' %}" alt="" style="height: 120px; width: 120px;">
+                          </div>
+                          <div class="ms-2" style="font-size: x-large; line-height: 45%;">
+                            <h3>Md. Jubayar Alam Rafi</h3>
+                            <p>Lecturer</p>
+                            <p>01707-587089</p>
+                            <p>jobayaralamrafi27093@gmail.com</p>
+                          </div>
+                        </div>
+
+                      </div>
+                      <div class="col-lg-6 ">
+                        <div class="d-flex bg-light p-2 mb-2">
+                          <div>
+                            <img src="{% static 'teachers/tariqul.jpg' %}" alt="" style="height: 120px; width: 120px;">
+                          </div>
+                          <div class="ms-2" style="font-size: x-large; line-height: 45%;">
+                            <h3>Md. Tariqul Islam</h3>
+                            <p>Lecturer</p>
+                            <p>01842-733104</p>
+                            <p>tariq.ugv@gmail.com</p>
+                          </div>
+                        </div>
+                        <div class="d-flex bg-light p-2 mb-2">
+                          <div>
+                            <img src="{% static 'teachers/shahin.jpg' %}" alt="" style="height: 120px; width: 120px;">
+                          </div>
+                          <div class="ms-2" style="font-size: x-large; line-height: 45%;">
+                            <h3>Md Shahin Hossen</h3>
+                            <p>Lecturer</p>
+                            <p>01877-774032</p>
+                            <p>shahin.ugv@gmail.com</p>
+                          </div>
+                        </div>
+                        <div class="d-flex bg-light p-2 mb-2">
+                          <div>
+                            <img src="{% static 'teachers/masud.jpg' %}" alt="" style="height: 120px; width: 120px;">
+                          </div>
+                          <div class="ms-2" style="font-size: x-large; line-height: 45%;">
+                            <h3>Md Masudur Rahman</h3>
+                            <p>Lecturer</p>
+                            <p>01731-279192</p>
+                            <p>masud7866@gmail.com</p>
+                          </div>
+                        </div>
+                        <div class="d-flex bg-light p-2 mb-2">
+                          <div>
+                            <img src="{% static 'teachers/muntasir.jpg' %}" alt="" style="height: 120px; width: 120px;">
+                          </div>
+                          <div class="ms-2" style="font-size: x-large; line-height: 45%;">
+                            <h3>Muntasir Rahman</h3>
+                            <p>Lecturer</p>
+                            <p>01785-566674</p>
+                            <p>muntasirprottoy911@gmail.com</p>
+                          </div>
+                        </div>
+                        <div class="d-flex bg-light p-2 mb-2">
+                          <div>
+                            <img src="{% static 'teachers/zahid.jpg' %}" alt="" style="height: 120px; width: 120px;">
+                          </div>
+                          <div class="ms-2" style="font-size: x-large; line-height: 45%;">
+                            <h3>Md Zahid Akon</h3>
+                            <p>Teaching Assistant</p>
+                            <p>01703-436278</p>
+                            <p>akonzahid0713@gmail.com</p>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Teacher page end...................... -->
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item ">
+                  <div class="bg-light p-2" style="border: 1px solid black">
+                    <h1 class="text-center mb-1">Class Representative (CR) Information Regular</h1>
+                  </div><br>
+                  <div class="">
+                    <table class="table table-light table-bordered border-dark" style="font-size: 20px;">
+                      <thead>
+                        <tr>
+                          <th scope="col">Sem.</th>
+                          <th scope="col">Session</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Mobile</th>
+                          <th scope="col">Email</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1st</td>
+                          <td>Summer-2023</td>
+                          <td>Mahatir Nur<br>Mosiur Rahman<br>Muaz Ahmed<br>Shahadat<br></td>
+                          <td>01792687297<br>01976672506<br>01976672506<br>01976672506<br></td>
+                          <td>
+                            islamnursaiful759@gmail.com<br>aminul@gmail.com<br>aminul@gmail.com<br>aminul@gmail.com<br>
+                          </td>
+
+                        </tr>
+                        <tr>
+                          <td>2nd</td>
+                          <td>Winter-2023</td>
+                          <td>Shagor<br>Sazzad</td>
+                          <td>01976672506<br>01976672506</td>
+                          <td>aminul@gmail.com<br>aminul@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>3rd</td>
+                          <td>Summer-2022</td>
+                          <td>Nabil Bin Mahabub(A)<br>Ariful Islam(B)</td>
+                          <td>01783747634<br>01315642792</td>
+                          <td>nmahbub1@gmail.com<br>arifulislamovi932@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>4th</td>
+                          <td>Winter-2022</td>
+                          <td>Santo Halder(A)<br>Md. Limon Faraji(B)</td>
+                          <td>01303314306<br>01309343538</td>
+                          <td>haldersanto976@gmail.com<br>muhammadlimon66@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>5th</td>
+                          <td>Summer-2021</td>
+                          <td>Gazi Maruf Rahmanr<br>Mosiur Rahman</td>
+                          <td>01716932039<br>01976672506</td>
+                          <td>gazimarufrahman01@gmail.com<br>aminul@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>6th</td>
+                          <td>Winter-2021</td>
+                          <td>Md Aminul Islam<br>Sabikunnahar</td>
+                          <td>01976672506<br>01976672506</td>
+                          <td>aminul@gmail.com<br>aminul@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>7th</td>
+                          <td>Summer-2020</td>
+                          <td>Foujia Khanam Tabia<br>Mosiur Rahman</td>
+                          <td>01716736744<br>01976672506</td>
+                          <td>foujiatabia28@gmail.com<br>aminul@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>8th</td>
+                          <td>Winter-2020</td>
+                          <td>Md. Sazzat Hossen akon(A)<br>Pronoy Kanti Roy(B)</td>
+                          <td>01755805553<br>01645644720</td>
+                          <td>asikulislamsazzat@gmail.com<br>roy404cse@gmail.com</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div class="carousel-item">
+                  <div class="bg-light p-2" style="border: 1px solid black">
+                    <h1 class="text-center mb-1">Class Representative (CR) Information Evening</h1>
+                  </div><br>
+                  <div class="">
+                    <table class="table table-light table-bordered border-dark" style="font-size: 20px;">
+                      <thead>
+                        <tr>
+                          <th scope="col">Sem.</th>
+                          <th scope="col">Session</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Mobile</th>
+                          <th scope="col">Email</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>1st</td>
+                          <td>Summer-2023</td>
+                          <td>Mahatir Nur<br>Mosiur Rahman<br>Muaz Ahmed<br>Aminul<br></td>
+                          <td>01976672506<br>01976672506<br>01976672506<br>01976672506<br></td>
+                          <td>aminul@gmail.com<br>aminul@gmail.com<br>aminul@gmail.com<br>aminul@gmail.com<br></td>
+
+                        </tr>
+                        <tr>
+                          <td>2nd</td>
+                          <td>Winter-2023</td>
+                          <td>MD. Sakil Akbar Limon<br>Mosiur Rahman</td>
+                          <td>01755947450<br>01976672506</td>
+                          <td>Khanwahidsk@gmail.com<br>aminul@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>3rd</td>
+                          <td>Summer-2022</td>
+                          <td>Iftihaz Ahsan Alvee<br>Mosiur Rahman</td>
+                          <td>01791334549<br>01976672506</td>
+                          <td>alveechy98@gmail.com<br>aminul@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>4th</td>
+                          <td>winter-2022</td>
+                          <td>Nahid Hasan Masud<br>Mosiur Rahman</td>
+                          <td>01733152544<br>01976672506</td>
+                          <td>nahid10001@gmail.com<br>aminul@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>5th</td>
+                          <td>Summer-2021</td>
+                          <td>Yesin Arafat<br>Mosiur Rahman</td>
+                          <td>01881338680<br>01976672506</td>
+                          <td>easinarafatasif98bsl@gmail.com<br>aminul@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>6th</td>
+                          <td>Winter-2021</td>
+                          <td>Mahatir Nur<br>Mosiur Rahman</td>
+                          <td>01976672506<br>01976672506</td>
+                          <td>aminul@gmail.com<br>aminul@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>7th</td>
+                          <td>Summer-2020</td>
+                          <td>Mohibbullah Rahat<br>Mosiur Rahman</td>
+                          <td>01751713497<br>01976672506</td>
+                          <td>muhibbullahrahat1996@gmail.com<br>aminul@gmail.com</td>
+                        </tr>
+                        <tr>
+                          <td>8th</td>
+                          <td>Winter-2020</td>
+                          <td>Niaz Howlader<br>Mosiur Rahman</td>
+                          <td>01946449753<br>01976672506</td>
+                          <td>niaz.info@yandex.com<br>aminul@gmail.com</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="bg-light p-2" style="border: 1px solid black">
+                    <h1 class="text-center mb-1">CSE Important site</h1>
+                  </div><br>
+                  <div class="">
+                    <table class="table table-light table-bordered border-dark" style="font-size: 20px;">
+                      <thead>
+                        <tr>
+                          <th scope="col">Name</th>
+                          <th scope="col">Website link</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Ugv Website</td>
+                          <td>www.ugv.edu.bd</td>
+                        </tr>
+                        <tr>
+                          <td>UGV Official FB Page</td>
+                          <td>www.facebook.com/ugvbarisal</td>
+                        </tr>
+                        <tr>
+                          <td>CSE Official Website</td>
+                          <td>www.cse.ugv.edu.bd</td>
+                        </tr>
+                        <tr>
+                          <td>CSE Offial FB Page</td>
+                          <td>www.facebook.com/dept.cse.ugv</td>
+                        </tr>
+                        <tr>
+                          <td>CSE Offial FB Group</td>
+                          <td>www.facebook.com/groups/cseofficialgroup</td>
+                        </tr>
+                        <tr>
+                          <td>Student Web Portal</td>
+                          <td>https://webportal.ugv.edu.bd/</td>
+                        </tr>
+                        <tr>
+                          <td>CSE Official YouTube</td>
+                          <td>https://www.youtube.com/@DepartmentofCSEUGVBarishal</td>
+                        </tr>
+                        <tr>
+                          <td>Ugv Website</td>
+                          <td>www.ugv.bd</td>
+                        </tr>
+
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="bg-light p-2" style="border: 1px solid black">
+                    <h1 class="text-center mb-1">Direction Services</h1>
+                  </div><br>
+                  <div class="">
+                    <table class="table table-light table-bordered border-dark" style="font-size: 20px;">
+                      <tbody>
+                        <tr>
+                          <td>Registrar Office</td>
+                          <td>Credit Transfer, Section/Group Change etc.</td>
+                          <td>B1 - Room - 204</td>
+
+
+                        </tr>
+                        <tr>
+                          <td>Assistant Registrar (Hr & Admin)</td>
+                          <td>Readmission, B2 Logistic Issues etc.</td>
+                          <td>B2 - Room - 208</td>
+
+                        </tr>
+                        <tr>
+                          <td>CSE Department Office</td>
+                          <td>All Departmental task. Follow the net Slide for Details.</td>
+                          <td>B2 - Room - 202</td>
+
+                        </tr>
+                        <tr>
+                          <td>Accounts (01877774010)</td>
+                          <td>Semester Fees, Fees Issues, Admit Card etc.</td>
+                          <td>B1 - Room - 208</td>
+
+                        </tr>
+                        <tr>
+                          <td>Controller of Examination</td>
+                          <td></td>
+                          <td>B1 - Room - 203</td>
+
+                        </tr>
+                        <tr>
+                          <td>Exam Control Office(01877774019 , 01870802803)</td>
+                          <td>Certificate, Result Issues etc.</td>
+                          <td>B1 - Room - 305</td>
+
+                        </tr>
+                        <tr>
+                          <td>IQAC(01877774062)</td>
+                          <td>Skill Course, Routine Problem etc.</td>
+                          <td>B1 - Room - 307</td>
+
+                        </tr>
+                        <tr>
+                          <td>2nd</td>
+                          <td>Summer-2023</td>
+                          <td>Mahatir Nur</td>
+
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-lg-5 bg-white" style="border: 2px solid black;">
+        <div class="row">
+          <div class="col-lg-12 text-center d-flex justify-content-center align-items-center"
+            style="background-color: rgb(133, 181, 243); border: 1px solid black;">
+            <!-- <div>
+              <img src="{% static 'UGV-Logo.jpg' %}" alt="" style="height: 80px; width: 80px;">
+            </div> -->
+            <div>
+              <h1>Teachers Activities Information</h1>
+            </div>
+            <!-- <div>
+              <img src="{% static 'CSE-Logo.jpg' %}" alt="" style="height: 80px; width: 80px;">
+            </div> -->
+          </div>
+
+          <!-- Info start ------------------->
+          {% for d in teachers %}
+          <div class="col-lg-12 m-1" style="background-color: antiquewhite; border: 1px solid black;">
+            <div class="row">
+              <!-- <div class="">
+                <img class="imag " src="{% static 'im.jpg' %}" alt="" style="height: 130px; width: 130px;">
+              </div> -->
+              <div class="col-lg-1">
+                <div class="d-flex justify-content-center align-items-center" style="height: 100%; width: 100%;">
+                  <div class="dynamicDiv" style="background-color: {{d.signal}}; ">
+
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-7">
+                <div class="" style="font-size: larger; line-height: 45%;">
+                  <h2>{{d.name}}</h2>
+                  <p>{{d.des}}</p>
+
+                </div>
+              </div>
+              <div class="col-lg-4 d-flex">
+                <div class=" p-2 text-center mx-1"
+                  style="width: 100%; border: 1px solid black; background-color: white">
+
+                  <h4 class="mt-2 text-danger">{{d.notice_t}}</h4>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+          <!-- Info end ------------------->
+        </div>
+      </div>
+      <div class="col-lg-1 bg-primary" style="height: 70px;">
+        <a href="/teacher/">
+          <h3 class="p-2 text-light">Notice</h3>
+        </a>
+
+      </div>
+      {% for d in notice %}
+      <div class="col-lg-11 align-items-center bg-info" style="height: 70px;">
+        <marquee behavior="" direction="">
+          <p class="p-1 " style="font-size: xx-large;">{{d.not}}
+          <p>
+        </marquee>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script>
+
+  </script>
+</body>
+
+</html>
